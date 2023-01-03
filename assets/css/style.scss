@@ -1,0 +1,153 @@
+---
+---
+
+/*
+  If the number of TAB files has changed, the following variable is required.
+  And it must be defined before `@import`.
+*/
+$tab-count: {{ site.tabs | size | plus: 1 }}; // plus 1 for home tab
+
+@import "{{ site.theme }}";
+
+/* append your custom style below */
+
+.table-wrapper > table.outputs-table {
+  border-collapse: separate;
+  border-spacing: 2px;
+  border: 1px solid #2c2c2c;
+
+  thead > tr > th {
+    padding: 0 4px;
+    color: black;
+    border: 1px solid #2c2c2c;
+
+    &::before {
+      display: inline-block;
+    }
+
+    &:nth-child(2)::before {
+      content: 'My Output >';
+    }
+
+    &:nth-child(3)::before {
+      content: 'Target Entity';
+    }
+
+    &:nth-child(4)::before {
+      content: 'Target Input';
+    }
+
+    &:nth-child(5)::before {
+      content: 'Parameter';
+    }
+
+    &:nth-child(6)::before {
+      content: 'Delay';
+    }
+
+    &:nth-child(7)::before {
+      content: 'Only Once';
+    }
+  }
+
+  tbody > tr > td {
+    padding: 0 4px;
+    border: 1px solid #2c2c2c;
+
+    &:first-child::before {
+      content: ' ';
+      background-size: 100% 100%;
+      height: 16px;
+      width: 16px;
+      display: inline-block;
+    }
+  }
+}
+
+@mixin dark-outputs-table {
+  .table-wrapper > table.outputs-table {
+    background-color: #262626;
+    border: {
+      top-color: #808080;
+      left-color: #808080;
+    }
+
+    thead > tr {
+      background: #DCDCDC;
+
+      th {
+        border: {
+          bottom-color: #808080;
+          right-color: #808080;
+        }
+      }
+    }
+
+    tbody > tr > td {
+      color: #b9b7b5;
+      background-color: #262626;
+      border: {
+        bottom-color: #808080;
+        right-color: #808080;
+      }
+
+      &:first-child::before {
+        background-image: url('{{site.baseurl}}/assets/img/hammer/hammer-io-dark.png');
+      }
+    }
+  }
+}
+
+@mixin light-output-table {
+  .table-wrapper > table.outputs-table {
+    background-color: #bbb;
+    border: {
+      top-color: #ccc;
+      left-color: #ccc;
+    }
+
+    thead > tr {
+      background: #f0f0f0;
+
+      th {
+        border: {
+          bottom-color: #ccc;
+          right-color: #ccc;
+        }
+      }
+    }
+
+    tbody > tr > td {
+      color: black;
+      background-color: white;
+      border: {
+        bottom-color: #ccc;
+        right-color: #ccc;
+      }
+
+      &:first-child::before {
+        background-image: url('{{site.baseurl}}/assets/img/hammer/hammer-io-light.png');
+      }
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-mode]) {
+    @include dark-outputs-table;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  html:not([data-mode]) {
+    @include light-output-table;
+  }
+}
+
+html[data-mode=dark] {
+  @include dark-outputs-table;
+}
+
+html[data-mode=light] {
+  @include light-output-table;
+}
