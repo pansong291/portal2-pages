@@ -5,9 +5,13 @@
   If the number of TAB files has changed, the following variable is required.
   And it must be defined before `@import`.
 */
+// {% comment %}
+/* {% endcomment %}
 $tab-count: {{ site.tabs | size | plus: 1 }}; // plus 1 for home tab
 
 @import "{{ site.theme }}";
+{% comment %} */
+// {% endcomment %}
 
 /* append your custom style below */
 
@@ -15,6 +19,14 @@ $tab-count: {{ site.tabs | size | plus: 1 }}; // plus 1 for home tab
   border-collapse: separate;
   border-spacing: 2px;
   border: 1px solid #2c2c2c;
+
+  caption {
+    padding: 0;
+    text-align: center;
+    caption-side: top;
+    font-weight: bold;
+    color: inherit;
+  }
 
   thead > tr > th {
     padding: 0 4px;
@@ -92,7 +104,11 @@ $tab-count: {{ site.tabs | size | plus: 1 }}; // plus 1 for home tab
       }
 
       &:first-child::before {
+        // {% comment %}
+        /* {% endcomment %}
         background-image: url('{{site.baseurl}}/assets/img/hammer/hammer-io-dark.png');
+        {% comment %} */
+        // {% endcomment %}
       }
     }
   }
@@ -126,7 +142,11 @@ $tab-count: {{ site.tabs | size | plus: 1 }}; // plus 1 for home tab
       }
 
       &:first-child::before {
+        // {% comment %}
+        /* {% endcomment %}
         background-image: url('{{site.baseurl}}/assets/img/hammer/hammer-io-light.png');
+        {% comment %} */
+        // {% endcomment %}
       }
     }
   }
