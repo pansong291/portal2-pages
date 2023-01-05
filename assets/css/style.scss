@@ -172,6 +172,16 @@ html[data-mode=light] {
   @include light-output-table;
 }
 
+// 新窗打开外部链接图标
 i.fa.fa-external-link {
   font-size: .5rem;
+}
+
+kbd {
+  &.enter::after {
+    content: '↵ Enter';
+  }
+  &.shift::after {
+    content: '⇧ Shift';
+  }
 }
