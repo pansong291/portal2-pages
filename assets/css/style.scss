@@ -171,3 +171,7 @@ html[data-mode=dark] {
 html[data-mode=light] {
   @include light-output-table;
 }
+
+i.fa.fa-external-link {
+  font-size: .5rem;
+}
