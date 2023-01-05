@@ -1,3 +1,4 @@
+# 根据一定格式生成 outputs 表格
 module Portal2
   class RenderOutputsTableTagBlock < Liquid::Block
     def render(context)

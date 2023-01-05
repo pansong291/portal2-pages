@@ -1,3 +1,4 @@
+# 使用 Liquid 标签渲染 script 标签
 module Portal2
   class RenderScriptTag < Liquid::Tag
 
