@@ -5,30 +5,16 @@ categories: [传送门2, 链接]
 tags: [链接]
 ---
 
-## func_instance
-[新窗口打开测试](./){: target="_top" }
-
-[测试](./)
-
-|  |  |  |  |  |  |  |
-| --- | --- | --- | --- | --- | --- | --- |
-|  | 代理中继 | detect_stuff_trigger | 禁用 |  | 0.00 | 不 |
-|  | 代理中继 | detect_stuff_trigger | 禁用 |  | 0.00 | 不 |
-|  | 代理中继 | detect_stuff_trigger | 禁用 |  | 0.00 | 不 |
-{: .outputs-table}
-
-{% comment %}
-test
-<script src="{{site.baseurl}}/assets/js/portal2-pages/define-link-target-blank.js"></script>
-{% endcomment %}
-
-这个是一个普通段落。这个是一个普通段落。这个是一个普通段落。这个是一个普通段落。这个是一个普通段落。这个是一个普通段落。这个是一个普通段落。这个是一个普通段落。
-
-{% outputs_table %}
-这个是标题
-+ 代理中继 | detect_stuff_trigger | 禁用 |  | 0.00 | 不
-+ 代理中继 | detect_stuff_trigger | 禁用 |  | 0.00 | 不
-+ 代理中继 | detect_stuff_trigger | 禁用 |  | 0.00 | 是
-{% endoutputs_table %}
-
-{% script define-link-target-blank.js %}
+## Hammer
+[Hammer 快捷键](https://developer.valvesoftware.com/wiki/Hammer_Hotkey_Reference) [中文版](https://developer.valvesoftware.com/wiki/Hammer_Hotkey_Reference:zh-cn) <br>
+[传送门2 实例列表](https://developer.valvesoftware.com/wiki/List_of_Portal_2_Instances) <br>
+[传送门2 实体列表](https://developer.valvesoftware.com/wiki/List_of_Portal_2_Entities) <br>
+[传送门2 控制台命令](https://developer.valvesoftware.com/wiki/List_of_Portal_2_console_commands_and_variables) <br>
+[传送门2 环境音效](https://developer.valvesoftware.com/wiki/List_of_Portal_2_Soundscapes) <br>
+[传送门2 语音线](https://theportalwiki.com/wiki/Voice_lines) <br>
+[传送门2 关卡列表](https://developer.valvesoftware.com/wiki/List_of_Portal_2_Levels) <br>
+[传送门2 视频列表](https://developer.valvesoftware.com/wiki/List_of_Portal_2_Movies) <br>
+[传送门2 Particle 列表](https://developer.valvesoftware.com/wiki/List_of_Portal_2_Particles) <br>
+[传送门2 脚本函数](https://developer.valvesoftware.com/wiki/List_of_Portal_2_Script_Functions) <br>
+[传送门2 天空盒](https://developer.valvesoftware.com/wiki/Portal_2_Sky_List) <br>
+<kbd class="shift"/> + <kbd class="enter"/>
